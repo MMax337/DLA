@@ -29,7 +29,34 @@ This project was developed as part of a research group with the primary goal of 
   ```
 
 ## Usage
-Import the DLA function to your script and run the simulation.
-```python
-  from DLA import DLA
+Specify the settings of the simulation. An example is provided in `DLA/example.txt`.
+
+After specifying the settings, you can run the simulation using the following command:
+```bash
+python simulation.py path_to_file
 ```
+
+### Rules
+   1. Lines starting with '#' are considered comments
+   2. Empty lines are skipped.
+
+### Parameters
+You should provide 2 parameters. The simulation will generate an image containing the grid with pictures for every combination.
+Example:
+```
+X = [0, 2, 4]; D1
+Y = [0, 2, 4, 8]; D2
+```
+After ';' you can provide your own names that would be used in the image generation.
+The example settings:
+```
+particles = 20_000; Add = (X, 0.5); Move = (32, 0, X, 0.5); ratio = (1, 2, Y); offset = 5_000
+
+```
+1. `parctiles` - the number of particles to be placed on the grid.
+2. `Add` - Parameters that determine the probability of crystallization of particles from the upstream and the 3D flux stream.
+3. `Move`
+      * the first 2 params determine the role of curvature on the deattachment of the particles
+      * the last 2 parameters determine the role of curvature in the attachment of these particles
+4. `ratio` - The ratio of upstream : moving : 3D flux particles. The values are integers.
+5. `offset` The number of particles that attach before the moving and 3D flux processes start.start.
