@@ -1,0 +1,9 @@
+# Lines starting with # are considered comments
+# Empty lines are not taken in considaration and may be put anywhere
+
+# You can specify X = [values] or X = [value] ; SUBTITLE_NAMES
+# For integers you can use '_' as separator, e.g. 20_000
+
+X = [0, 2, 4]; D1
+Y = [0, 2, 4, 8]; D2
+particles = 20_000; Add = (0, 0.5); Move = (32, 0, 4, 0.5); ratio = (1, X, Y); offset = 5_000

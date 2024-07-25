@@ -200,7 +200,6 @@ def add_particles(particles: int, grid : ParticleGrid, A, B):
     while num_particles < particles:
         generate_add_particle(grid, A, B)
         num_particles += 1
-
     return
 
 
@@ -292,7 +291,7 @@ def flux3d(grid : ParticleGrid, particle_number : int, A_add : float, B_add : fl
     return
 
 
-def DLA(playground, particles, add_fall_ratio: List[int], add_param: tuple[float, float], fall_param: tuple[float, float], offset: int):
+def DLA(playground, particles :int, add_fall_ratio: List[int], add_param: tuple[float, float], fall_param: tuple[float, float], offset: int):
     """
     Simulates the Diffusion-Limited Aggregation (DLA) process.
 
@@ -326,6 +325,7 @@ def DLA(playground, particles, add_fall_ratio: List[int], add_param: tuple[float
         particle_fall(grid, to_fall, kernel, A_fall, B_fall, A_add=A_fall_add, B_add=B_fall_add)
         flux3d(grid, flux3d_num, A_add, B_add)
         num_particles += to_add + flux3d_num
+
 
     return grid.pg
 
