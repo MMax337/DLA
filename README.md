@@ -4,6 +4,16 @@
 
 This project was developed as part of a research group with the primary goal of incorporating surface tension into the Diffusion-Limited Aggregation (DLA) process. DLA is a process that describes the growth pattern of clusters formed by particles adhering to a substrate in a random manner. By including surface tension, we aim to simulate more realistic physical phenomena and enhance the understanding of pattern formation in natural systems.
 
+## Some results
+<p float="left">
+  <img src="https://github.com/MMax337/DLA/blob/main/images/simulation1.png?raw=true" width="400" />
+  <img src="https://github.com/MMax337/DLA/blob/main/images/simulation2.png?raw=true" width="400" />
+</p>
+
+<div style="text-align: center;">
+  <img src="https://github.com/MMax337/DLA/blob/main/images/simulation3.png?raw=true" width="400" />
+</div>
+
 ## Objectives
 
 1. **Incorporate Surface Tension:** Introduce surface tension effects into the traditional DLA model to better simulate real-world phenomena.
